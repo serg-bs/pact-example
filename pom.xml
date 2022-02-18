@@ -42,16 +42,16 @@
         </dependency>
 
         <dependency>
-            <groupId>au.com.dius</groupId>
-            <artifactId>pact-jvm-consumer-junit_2.11</artifactId>
-            <version>3.5.0</version>
+            <groupId>au.com.dius.pact.consumer</groupId>
+            <artifactId>junit5</artifactId>
+            <version>4.2.2</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>au.com.dius</groupId>
-            <artifactId>pact-jvm-provider-junit_2.11</artifactId>
-            <version>3.5.0</version>
+            <groupId>au.com.dius.pact.provider</groupId>
+            <artifactId>junit5spring</artifactId>
+            <version>4.2.2</version>
             <scope>test</scope>
         </dependency>
 
@@ -62,11 +62,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>au.com.dius</groupId>
-                <artifactId>pact-jvm-provider-maven_2.11</artifactId>
-                <version>3.2.10</version>
             </plugin>
 
             <plugin>
