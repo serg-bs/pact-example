@@ -67,22 +67,9 @@
                 <groupId>au.com.dius.pact.provider</groupId>
                 <artifactId>maven</artifactId>
                 <version>4.2.2</version>
-                <executions>
-                    <execution>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>publish</goal>
-                        </goals>
-                        <!-- Run broker on local machine with docker using docker-compose file -->
-                        <configuration>
-                            <pactDirectory>${basedir}/target/pacts</pactDirectory>
-                            <pactBrokerUrl>http://localhost:80</pactBrokerUrl>
-                            <projectVersion>1.1</projectVersion>
-                        </configuration>
-                    </execution>
-                </executions>
-
                 <configuration>
+                    <pactBrokerUrl>http://localhost:80</pactBrokerUrl>
+                    <pactDirectory>${basedir}/target/pacts</pactDirectory>
                     <serviceProviders>
                         <!-- You can define as many as you need, but each must have a unique name -->
                         <serviceProvider>

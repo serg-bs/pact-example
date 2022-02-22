@@ -1,4 +1,16 @@
 # pact-example
 
-1. Run PactConsumerTest, it will test consumer and generate pacts/test_consumer-test_provider.json
-2. Run PactProviderTest to test provider against pacts/test_consumer-test_provider.json
+##Consumer
+run consumer test and create pacts/test_consumer-test_provider.json 
+```bash 
+mvn test
+```
+publish pacts/test_consumer-test_provider.json to broker
+```bash
+mvn pact:publish 
+```
+##Provider 
+run test against provider and publish result to broker
+```bash
+mvn test -Dpact.verifier.publishResults=true
+```
