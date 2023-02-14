@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import com.example.demo.HelloService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,11 +15,12 @@ import java.util.Map;
 
 @RestController
 public class HelloController {
+    @Autowired
+    HelloService helloService;
+
     @GetMapping(value = "/hello", produces = "application/json")
     public Map<String, Object> hello() {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("condition", Boolean.TRUE);
-        map.put("name", "tom");
+        HashMap<String, Object> map = helloService.makeHello();
         return map;
     }
 
